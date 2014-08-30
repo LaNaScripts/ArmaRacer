@@ -3,7 +3,7 @@
 //	@file Author: RaminNoodle
 //	@file Created: 9/10/2014 
 
-raceRoute = [[2051.03,4809.71,0],[1816.01,3911,0]];
+raceRoute = [[2051.03,4809.71,10],[1816.01,3911,100]];
 
 if (isServer) then {
 	[] execVM "server\init.sqf";

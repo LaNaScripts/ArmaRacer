@@ -7,6 +7,8 @@ switch (gameState) do {
 				};
 			case "STARTRACE": { 
 					hint "Start Race";
-					[] execVM "client\functions\createCourse.sqf"
+					playerTimer = 60;
+					[] execVM "client\functions\createCourse.sqf";
+					[] execVM "client\functions\playerTimer.sqf";
 				};
 		};
