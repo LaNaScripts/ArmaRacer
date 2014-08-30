@@ -9,10 +9,8 @@ if (isDedicated) exitWith {};
 gp =  createGroup West;
 [player] joinSilent gp;
 
-execVM "client/setWaypoints.sqf";
-
 waitUntil {!isNull player};
 
-execVM "racetrack/client/setupCheckPoints.sqf";
+[] execVM "client\functions\setWaypoints.sqf";
  
 //	copyToClipboard format ["%1",getMarkerPos "wpMarker3"];

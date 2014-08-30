@@ -12,10 +12,11 @@ onWaypoint = 0;
 
 if (isServer) then {
 	[] execVM "server\init.sqf";
+	
 };
 
 
 //(!isServer)
-if (isServer) then {
+if (!isServer) then {
 	[] execVM "client\init.sqf";
 };
