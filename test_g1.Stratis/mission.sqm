@@ -43,7 +43,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1846.8383,5.5,5804.8667};
+					position[]={1857.1405,5.5,5842.6421};
 					special="FLY";
 					id=0;
 					side="WEST";
@@ -60,11 +60,47 @@ class Mission
 	};
 	class Markers
 	{
-		items=1;
+		items=7;
 		class Item0
 		{
-			position[]={1845.7716,5.5,5805.3003};
+			position[]={1852.4581,5.5,5878.8491};
 			name="marker1";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={2051.0293,0.042574365,4809.7109};
+			name="wpMarker1";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={1816.0059,-5.7380767,3911.001};
+			name="wpMarker2";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={1826.5437,-17.054039,2888.8389};
+			name="wpMarker3";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={2272.6421,55.388042,2179.2979};
+			name="wpMarker4";
+			type="Empty";
+		};
+		class Item5
+		{
+			position[]={3045.4106,147.66118,2576.2197};
+			name="wpMarker5";
+			type="Empty";
+		};
+		class Item6
+		{
+			position[]={4362.6294,228.13306,3837.2378};
+			name="wpMarker6";
 			type="Empty";
 		};
 	};
