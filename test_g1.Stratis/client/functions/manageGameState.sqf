@@ -1,9 +1,12 @@
 switch (gameState) do {
 			case "LOBBY": { 
-					hint "LOBBY";
+					hint "Waiting in Lobby";
+				};
+			case "COUNTDOWN": { 
+					hint "Count Down";
 				};
 			case "STARTRACE": { 
-					hint "STARTRACE";
-					//[] execVM "client\functions\setCourse.sqf"
+					hint "Start Race";
+					[] execVM "client\functions\createCourse.sqf"
 				};
 		};

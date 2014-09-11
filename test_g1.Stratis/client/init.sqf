@@ -14,9 +14,7 @@ waitUntil {!isNull player};
 [] execVM "client\functions\setClientPVars.sqf";
 
 waitUntil {!isNil "ServerPVsynced"};
-
 if (!isNil "gameState") then {
-	hint "here";
 	[] execVM "client\functions\manageGameState.sqf";
 };
  

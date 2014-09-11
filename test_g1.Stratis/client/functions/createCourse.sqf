@@ -1,6 +1,6 @@
 //	@file Version: 1.0
-//	@file Name: setWaypoints.sqf
-//	@file Description: client setWaypoints 
+//	@file Name: createCourse.sqf
+//	@file Description: client createCourse 
 //	@file Author: RaminNoodle
 //	@file Created: 9/10/2014 
 
