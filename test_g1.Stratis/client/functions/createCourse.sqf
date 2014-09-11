@@ -14,10 +14,11 @@ deleteWaypoint [gp, 0];
 	{
 		_script = [_x, _forEachIndex] spawn {
 			_wp = gp addWaypoint [_this select 0, _this select 1];
-			_tmpObj = createVehicle ["Sign_Circle_F",_this select 0,[],_i,"NONE"];
-			checkPointArray = checkPointArray + _tmpObj
+			//_tmpObj = createVehicle ["Sign_Circle_F",_this select 0,[],_i,"NONE"];
+			//checkPointArray = checkPointArray + _tmpObj
 		};
 		waitUntil {scriptDone _script};
 	} forEach _this;
 };
+
 
