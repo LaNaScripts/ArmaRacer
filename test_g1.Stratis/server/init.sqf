@@ -15,6 +15,9 @@ execVM "server\functions\setVehicals.sqf";
 //Set game state to LOBBY
 gameState = "LOBBY";
 publicVariable "gameState";
-sleep 10;
-gameState = "STARTRACE";
-publicVariable "gameState";
+
+[] spawn {
+	sleep 5; 
+	gameState = "STARTRACE";
+	publicVariable "gameState";
+};

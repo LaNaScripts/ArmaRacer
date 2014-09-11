@@ -5,7 +5,7 @@
 
 0 = 0 spawn {
 	"gameState" addPublicVariableEventHandler {
-		hint format["gameState Event Handler %1",_this select 0];
-		[] execVM "client\functions\manageGameState.sqf";		
+		hint "STARTRACE";
+		//[] execVM "client\functions\manageGameState.sqf";		
 	};
 };
