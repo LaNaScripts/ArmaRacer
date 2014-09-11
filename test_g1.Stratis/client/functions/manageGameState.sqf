@@ -1,4 +1,4 @@
-switch (_this select 0) do {
+switch (gameState) do {
 			case "LOBBY": { 
 					hint "LOBBY";
 				};
