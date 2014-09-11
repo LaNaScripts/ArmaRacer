@@ -12,5 +12,10 @@ gp =  createGroup West;
 waitUntil {!isNull player};
 
 [] execVM "client\functions\setClientPVars.sqf";
+
+waitUntil {!isNil "ServerPVsynced"};
+if (!isNil "gameState") then {
+	[] execVM "client\functions\manageGameState.sqf";
+};
  
 //	copyToClipboard format ["%1",getMarkerPos "wpMarker3"];
