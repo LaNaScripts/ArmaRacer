@@ -11,7 +11,7 @@ gp =  createGroup West;
 
 waitUntil {!isNull player};
 
-//[] execVM "client\functions\setClientPVars.sqf";
+[] execVM "client\functions\setClientPVars.sqf";
 
 waitUntil {!isNil "ServerPVsynced"};
 
