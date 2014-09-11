@@ -1,4 +1,4 @@
-trackArray = [ 
+raceCourseArray = [ 
 				["Track 1",
 					[
 						["Check Point 1",[2051.03,4809.71,0]],

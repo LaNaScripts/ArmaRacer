@@ -11,6 +11,6 @@ gp =  createGroup West;
 
 waitUntil {!isNull player};
 
-[] execVM "client\functions\setWaypoints.sqf";
+[] execVM "client\functions\setClientPVars.sqf";
  
 //	copyToClipboard format ["%1",getMarkerPos "wpMarker3"];

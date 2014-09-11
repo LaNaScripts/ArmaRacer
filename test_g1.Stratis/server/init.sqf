@@ -5,10 +5,11 @@
 
 
 if (!isServer) exitWith {};
-_i=0;
-while {_i<1} do {
-	_i=_i+1;
-	_helo = createVehicle ["B_Heli_Light_01_armed_F",getMarkerPos "marker1",[],_i,"FORM"];
-	_helo engineOn true;
-	execVM "server\functions\setWaypoints.sqf";
-};
+
+execVM "server\functions\setVehicals.sqf";
+
+gameState = "LOBBY";
+publicVariable gameState;
+sleep 4;
+gameState = "STARTRACE";
+publicVariable gameState;
