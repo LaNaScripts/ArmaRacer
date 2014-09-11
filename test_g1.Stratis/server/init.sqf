@@ -15,6 +15,5 @@ execVM "server\functions\setVehicals.sqf";
 //Set game state to LOBBY
 gameState = "LOBBY";
 publicVariable gameState;
-sleep 4;
 gameState = "STARTRACE";
 publicVariable gameState;
