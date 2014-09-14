@@ -12,13 +12,36 @@ gp =  createGroup West;
 deleteWaypoint [gp,0];
 waitUntil {!isNull player};
 
+
+0 = 0 spawn {
+waitUntil {!(IsNull (findDisplay 46))};
+_keyDown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if (_this select 1 == 21) then {_tObj = createVehicle ['Sign_Circle_F',position player,[],0,'NONE'];
+		_tObj setVectorUp (vectorUp player);
+		_tObj setVectorDir (vectorDir player);
+		tmpObj pushBack _tObj;}"];
+};
+
+
 player addAction [ 
-	"yourAction", { 
+	"Waypoint", { 
 		_tObj = createVehicle ["Sign_Circle_F",position player,[],0,"NONE"];
 		_tObj setVectorUp (vectorUp player);
-		
+		_tObj setVectorDir (vectorDir player);
+
 		tmpObj pushBack _tObj;
+	}
+];
+
+player addAction [ 
+	"SAVE", { 
+		sv = "";
+		{
+			sv = sv + format["[%1,%2,%3],",(getPosASL _x),(vectorDir _x),(vectorUp _x)];
+			
+		}forEach tmpObj;
+		copyToClipboard (str (sv));
 	} 
+	
 ];
 
 [] execVM "client\functions\setClientPVars.sqf";

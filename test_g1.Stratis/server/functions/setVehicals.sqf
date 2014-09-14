@@ -10,5 +10,6 @@ _i=0;
 while {_i<1} do {
 	_i=_i+1;
 	_helo = createVehicle ["B_Heli_Light_01_armed_F",getMarkerPos "marker1",[],_i,"FORM"];
+	_helo removeMagazinesTurret ["24Rnd_missiles", [-1]];
 	_helo engineOn true;
 };
