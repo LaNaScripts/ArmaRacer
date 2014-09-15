@@ -10,14 +10,33 @@ if (!isServer) exitWith {};
 ServerPVsynced = true;
 publicVariable "ServerPVsynced";
 
-execVM "server\functions\setVehicals.sqf";
 
 //Set game state to LOBBY
 gameState = "LOBBY";
 publicVariable "gameState";
 
-[] spawn {
-	sleep 5; 
-	gameState = "STARTRACE";
-	publicVariable "gameState";
-};
+sleep 5; 
+gameState = ["LOADCOURSE",0];
+publicVariable "gameState";
+
+sleep 5; 
+execVM "server\functions\setVehicals.sqf";
+gameState = "STARTRACE";
+publicVariable "gameState";
+
+
+sleep 5; 
+gameState = "RESETCOURSE";
+publicVariable "gameState";
+sleep 2;
+execVM "server\functions\removeVehicals.sqf";
+
+sleep 5; 
+gameState = ["LOADCOURSE",1];
+publicVariable "gameState";
+
+sleep 5; 
+execVM "server\functions\setVehicals.sqf";
+gameState = "STARTRACE";
+publicVariable "gameState";
+

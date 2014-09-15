@@ -6,11 +6,14 @@
 if (isDedicated) exitWith {};
 
 tmpObj=[];
+placeMarker = false;
 
 gp =  createGroup West;
 [player] joinSilent gp;
 deleteWaypoint [gp,0];
 waitUntil {!isNull player};
+
+
 
 
 0 = 0 spawn {
@@ -22,15 +25,6 @@ _keyDown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if (_this select
 };
 
 
-player addAction [ 
-	"Waypoint", { 
-		_tObj = createVehicle ["Sign_Circle_F",position player,[],0,"NONE"];
-		_tObj setVectorUp (vectorUp player);
-		_tObj setVectorDir (vectorDir player);
-
-		tmpObj pushBack _tObj;
-	}
-];
 
 player addAction [ 
 	"SAVE", { 
